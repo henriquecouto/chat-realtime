@@ -1,4 +1,4 @@
-# MW Chat
+# Client Documentation
 
 A aplicação faz uso do <font size=5>*Express*</font>, para o gerenciamento de end-points, do <font size=5>*Socket.io*</font>, para as conexões em tempo real, e do <font size=5>*MongoDB*</font>, para armazenar as informações. 
 
