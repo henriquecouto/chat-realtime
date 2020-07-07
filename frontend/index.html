@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MW Chat Example</title>
+
+    <link rel="stylesheet" type="text/css" href="fonts/roboto/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/chat.css" />
+    <link rel="stylesheet" type="text/css" href="css/modal.css" />
+    <link rel="stylesheet" type="text/css" href="css/group.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <script src="js/libs/socket.io.js"></script>
+    <script src="js/helpers/search.js"></script>
+    <script src="js/helpers/constants.js"></script>
+    <script src="js/helpers/chat.js"></script>
+    <script src="js/helpers/modal.js"></script>
+    <script src="js/controllers/activities.js"></script>
+    <script src="js/controllers/chat.js"></script>
+    <script src="js/controllers/users.js"></script>
+    <script src="js/controllers/groups.js"></script>
+    <script src="js/sockets/chat.js"></script>
+    <script src="js/sockets/groups.js"></script>
+  </head>
+  <body>
+    <div
+      style="
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <form id="form-update-work" onsubmit="updateActivity(event)">
+        <input placeholder="Atividade" />
+        <button type="submit">Atualizar</button>
+      </form>
+    </div>
+    <div id="chat">
+      <div class="chat-bar" style="height: 99vh;">
+        <div class="chat-bar-header" onclick="handleExpand(event, '99vh')">
+          Conversas
+          <i class="material-icons btn" onclick="createGroup(event)"
+            >add_circle</i
+          >
+        </div>
+        <div class="chat-bar-list" style="display: flex;">
+          <b>Grupos</b>
+          <div id="chat-bar-list-groups"></div>
+          <b>Usuários</b>
+          <div id="chat-bar-list-users"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

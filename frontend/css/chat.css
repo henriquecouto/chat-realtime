@@ -1,0 +1,223 @@
+#chat {
+  display: flex;
+  align-items: flex-end;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 0vh;
+  z-index: 5;
+}
+
+.chat-bar {
+  margin: 0 10px;
+  width: 350px;
+  background-color: #4f4f4f;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+}
+
+.chat-bar-header {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 0 15px;
+  height: 60px;
+  background-color: #55f;
+  font-size: large;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.chat-bar-tabs {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  height: 40px;
+}
+
+.chat-bar-tabs-tab {
+  background-color: #414141;
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-bottom: #0000 5px solid;
+  border-top: #0000 5px solid;
+}
+
+.chat-bar-tabs-tab:hover {
+  background-color: #41414122;
+}
+
+.chat-bar-tabs .active {
+  border-bottom: #fff 5px solid;
+}
+
+.chat-bar-list {
+  display: flex;
+  flex-direction: column;
+  overflow-y: overlay;
+  overflow-x: inherit;
+  height: calc(100% - 100px);
+  text-align: center;
+}
+
+.chat-bar-list-item,
+.chat-bar-list-group-users {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.chat-bar-list-item:hover,
+.chat-bar-list-group-users:hover {
+  background-color: #fff2;
+}
+
+.chat-bar-list-item .online {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #0d0;
+}
+
+.chat-bar-list-item .activity {
+  color: #0d0;
+  flex: 0.8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+}
+
+.chat-activity {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 7.5px 15px;
+  padding: 10px;
+  background-color: #fff1;
+  cursor: default;
+}
+
+.chat-activity span:first-child {
+  font-size: small;
+}
+
+.chat-activity:first-child {
+  margin-top: 15px;
+}
+
+.chat-activity:last-child {
+  margin-bottom: 15px;
+}
+
+.chat-container-messages {
+  height: calc(100% - 105px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 5px;
+}
+
+.chat-message-list {
+  overflow: overlay;
+  height: 100%;
+}
+
+.chat-message {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 7.5px 15px;
+  padding: 10px 10px 2px 10px;
+  cursor: default;
+  border-radius: 15px;
+}
+
+.received {
+  background-color: #55f;
+  border-top-left-radius: 0;
+  margin-right: 40px;
+}
+
+.sended {
+  background-color: #414141;
+  border-top-right-radius: 0;
+  margin-left: 40px;
+}
+
+.received div:last-child,
+.sended div:last-child {
+  padding-bottom: 8px;
+  font-size: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.chat-form-send-message {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-form-input-message {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
+}
+
+.chat-form-input-message input {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.chat-form-input-message button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  background-color: #55f;
+  color: #fff;
+  margin: 0 15px 0 5px;
+  border-radius: 30px;
+}
+
+.chat-mark-user {
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+  background-color: #555f;
+  width: calc(100% - 107px);
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin: 0 30px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.chat-mark-user-item {
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+.chat-mark-user-item:first-child {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.chat-mark-user-item:hover {
+  background-color: #0004;
+}
